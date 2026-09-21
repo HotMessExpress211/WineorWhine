@@ -1,0 +1,156 @@
+/* Base Layout & Hot Pink Background Configuration */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ff007f; /* Hot Pink Base Color */
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Page Header Title - Elegant Cursive Font Style */
+header h1 {
+    font-family: 'Pinyon Script', cursive, serif;
+    font-size: 3.5rem; /* Makes the elegant script larger and highly visible */
+    text-align: center;
+    padding: 1.5rem 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to let background peek through */
+    border-bottom: 1px solid #eaeaea;
+    color: #111;
+}
+
+/* Continuous Looping Falling Glitter Animation */
+.glitter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to buttons/links normally */
+    z-index: 9999; /* Keeps animation over the background layout */
+    
+    /* Generates multiple micro-dot layers representing scattered falling specs */
+    background-image: 
+        radial-gradient(circle, #ffffff 1px, transparent 1px),
+        radial-gradient(circle, #fff700 1.5px, transparent 1.5px),
+        radial-gradient(circle, #ffffff 1px, transparent 1px);
+    background-size: 550px 550px, 400px 400px, 300px 300px;
+    background-position: 0% 0%, 33% 45%, 70% 10%;
+    
+    /* Triggers continuous drop timeline */
+    animation: glitterFall 12s linear infinite;
+}
+
+@keyframes glitterFall {
+    0% {
+        background-position: 0px 0px, 133px 45px, 210px 30px;
+    }
+    100% {
+        /* Smooth vertical scroll loop offset from top down to bottom */
+        background-position: 0px 550px, 133px 445px, 210px 330px;
+    }
+}
+
+/* Two-Column Blog Grid Content Area */
+.blog-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 2; /* Ensures text cards lay neatly over background elements */
+}
+
+/* Main Content Area */
+.blog-posts {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Sidebar Area */
+.blog-sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Article Card Styles */
+.post {
+    background: rgba(255, 255, 255, 0.95); /* Bright white card with slight softening */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    margin-top: 0;
+    color: #222;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #ff007f; /* Theme-matched highlight link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Component Styling */
+.sidebar-widget {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-widget h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #ff007f;
+    padding-bottom: 0.5rem;
+    color: #222;
+}
+
+.sidebar-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-widget ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-widget ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar-widget ul li a:hover {
+    color: #ff007f;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+

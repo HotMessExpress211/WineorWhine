@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fresh Start</title>
+    <!-- Google Fonts link for an elegant cursive style -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Page Setup */
+        body {
+            background-color: #ff007f; /* Hot Neon Pink */
+            margin: 0;
+            padding: 0;
+            font-family: 'Great Vibes', cursive;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container styling to separate content clearly */
+        .main-container {
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            padding: 40px 20px;
+            z-index: 2; /* Sits above the background glitter */
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff007f, 0 0 30px #ff007f;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Circular Navigation Layout */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .nav-button {
+            width: 90px;
+            height: 90px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-button:hover {
+            background-color: #ffffff;
+            color: #ff007f;
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #ffffff;
+        }
+
+        .profile-pic {
+            width: 100%;
+            max-width: 400px;     /* Prevents it from getting too wide */
+            height: auto;          /* Maintains the correct portrait proportions */
+            border-radius: 8px;    /* Optional: Softens the edges nicely */
+            display: block;
+            margin: 0 auto;        /* Centers the image on the page */
+        }
+
+        /* Social Media Button Styling */
+        .facebook-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #1877f2; /* Authentic Facebook Blue */
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif; /* Standard font for better button clarity */
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .facebook-link:hover {
+            background-color: #145dbf;
+            transform: translateY(-2px);
+        }
+
+        /* ✨ Background CSS Falling Glitter Sparkles Animation ✨ */
+        .glitter-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            background: radial-gradient(circle, #ffffff 10%, rgba(255,255,255,0.8) 30%, rgba(255,215,0,0) 70%);
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Glitter container generating random-looking falling bits -->
+    <div class="glitter-container">
+        <!-- Various styled sparkles with offset positions, speeds, and sizes -->
+        <div class="sparkle" style="left: 10%; width: 8px; height: 8px; animation-duration: 6s; animation-delay: 0s;"></div>
+        <div class="sparkle" style="left: 25%; width: 5px; height: 5px; animation-duration: 9s; animation-delay: 1s;"></div>
+        <div class="sparkle" style="left: 40%; width: 12px; height: 12px; animation-duration: 5s; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="left: 55%; width: 6px; height: 6px; animation-duration: 8s; animation-delay: 2s;"></div>
+        <div class="sparkle" style="left: 70%; width: 10px; height: 10px; animation-duration: 7s; animation-delay: 1.5s;"></div>
+        <div class="sparkle" style="left: 85%; width: 4px; height: 4px; animation-duration: 11s; animation-delay: 0s;"></div>
+        <div class="sparkle" style="left: 95%; width: 7px; height: 7px; animation-duration: 6.5s; animation-delay: 3s;"></div>
+        
+        <div class="sparkle" style="left: 15%; width: 10px; height: 10px; animation-duration: 7.5s; animation-delay: 4s;"></div>
+        <div class="sparkle" style="left: 48%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: 3.5s;"></div>
+        <div class="sparkle" style="left: 65%; width: 11px; height: 11px; animation-duration: 5.8s; animation-delay: 2.2s;"></div>
+        <div class="sparkle" style="left: 80%; width: 8px; height: 8px; animation-duration: 8.2s; animation-delay: 5s;"></div>
+    </div>
+
+    <!-- Visible Page Content Layer -->
+    <div class="main-container">
+
+        <!-- Add your image tag right here -->
+        <img src="family-photo.jpg" alt="This is a picture of Mallory's family">
+    </div>
+        
+        <!-- Navigation Area -->
+        <div class="nav-container">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="blog.html" class="nav-button">Blog</a>
+    </div>
+
+        <h1>Welcome to My Website</h1>
+
+        <!-- Profile Picture: Point this to your local image filename -->
+        <img src="photo.jpg" alt="Profile Photo" class="profile-pic">
+
+        <p>
+            Welcome to my brand new local server project space! This environment is built completely from scratch. 
+            Feel free to update this paragraph text with your own fresh introduction as you continue working.
+        </p>
+
+        <!-- Facebook Connection Link -->
+        <div>
+            <a href="https://www.facebook.com/share/1DYLnUzkC6/" target="_blank" class="facebook-link">
+                Find Me On Facebook
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

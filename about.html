@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Website</title>
+    <style>
+        /* Consistent layout and vibrant background color */
+        body {
+            background-color: #ff007f;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            /* Starry accent background decoration */
+            background-image: 
+                radial-gradient(circle at 10% 20%, #ffffff 1px, transparent 1px),
+                radial-gradient(circle at 85% 40%, #ffffff 1.5px, transparent 1.5px),
+                radial-gradient(circle at 40% 75%, #ffffff 1.2px, transparent 1.2px),
+                radial-gradient(circle at 70% 15%, #ffffff 1px, transparent 1px);
+            background-size: 100% 100%;
+        }
+
+        /* Navigation menu container */
+        .nav-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Navigation items styled as circles */
+        .nav-item {
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        /* Highlights the active page item */
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-item:hover {
+            background-color: #ffffff;
+            color: #ff007f;
+        }
+
+        /* Consistent elegant cursive styling for the main header */
+        h1 {
+            font-family: 'Georgia', cursive, serif;
+            font-style: italic;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Profile image element */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main story text box */
+        .content-paragraph {
+            font-family: 'Georgia', cursive, serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 500px;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        /* Primary action button style */
+        .btn-facebook {
+            background-color: #0078ff;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-facebook:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Row -->
+    <div class="nav-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item active">About Me</a>
+        <a href="blog.html" class="nav-item">Blog</a>
+    </div>
+
+    <!-- Page Header -->
+    <h1>About Me</h1>
+
+    <!-- Display picture option -->
+    <img src="profile.jpg" alt="My Profile Photo" class="profile-img">
+
+    <!-- About Me details content -->
+    <p class="content-paragraph">
+        Welcome to my about page! I am building this platform completely on my own terms to share my creative journey. This is where I'll keep updates on my latest content and projects as I grow my space independently.
+    </p>
+
+    <!-- Social redirection path -->
+    <a href="https://facebook.com" target="_blank" class="btn-facebook">Find Me On Facebook</a>
+
+</body>
+</html>
+

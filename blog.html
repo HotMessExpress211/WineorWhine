@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Website</title>
+    <!-- Importing the cursive font used in your header -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ff007f; /* Matching hot pink background */
+            color: #ffffff;
+            font-family: 'Oooh+Baby', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .nav-btn {
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-btn.active {
+            position: relative;
+        }
+        .nav-btn.active::before {
+            content: "• ";
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 40px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        .blog-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-size: 1.8rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Consistent Navigation Bar -->
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="about.html" class="nav-btn">About Me</a>
+        <a href="blog.html" class="nav-btn active">Blog</a>
+    </div>
+
+    <!-- Blog Header -->
+    <h1>My Blog</h1>
+
+    <!-- Blog Content Area -->
+    <div class="blog-container">
+        <p>Welcome to my blog space! This page is ready for your updates, thoughts, and articles as you build out your content independently.</p>
+    </div>
+
+</body>
+</html>
+
